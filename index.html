@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>IE Placeholder compatible</title>
+		<!--[if IE]>
+            <link rel="stylesheet" type="text/css" href="style-ie.css" />
+        <![endif]-->
+		<script type="text/javascript" src="jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#send-button').click(function(){
+					$('#firstname-span').text($('#firstname-textbox').val());
+					$('#lastname-span').text($('#lastname-textbox').val());
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Input:</h1>
+		<div class="line">
+			<input id="firstname-textbox" type="text" value="" placeholder="First name" />
+		</div>
+		<div class="line">
+			<input id="lastname-textbox" type="text" value="" placeholder="Last name" />
+		</div>
+		<div class="line">
+			<input id="send-button" type="button" value="Send"  />
+		</div>
+		<h1>Output:</h1>
+		<div class="line">
+			First name: <span id="firstname-span"></span>
+		</div>
+		<div class="line">
+			Last name: <span id="lastname-span"></span>
+		</div>
+	</body>
+</html>
